@@ -106,3 +106,8 @@ def compare(a: Optional[BinaryNode], b: Optional[BinaryNode]):
         return False
 
     return compare(a.left, b.left) and compare(a.right, b.right)
+
+
+def insert(tree: Optional[BinaryNode], value):
+    if tree is None:
+        return
