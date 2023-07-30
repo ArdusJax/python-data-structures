@@ -7,20 +7,29 @@ arr = [1, 2, 13, 44, 5, 33, 1, 21, 5, 19, 77, 9, 393, 1, 2, 99]
 
 # Even numbers
 def evens(arr):
-    even_list = [x for x in arr if x % 2]
+    even_list = [x for x in arr if x % 2 == 0]
     print(even_list)
 
 
-# evens(arr)
+def evens_using_generator(arr):
+    even_list = (x for x in arr if x % 2 == 0)
+    for i in even_list:
+        print(f"even: {i}")
+
+
+evens(arr)
+# evens_using_generator(arr)
 
 
 # Odds
 def odds(arr):
-    odd_list = [x for x in arr if not x % 2]
+    odd_list = [x for x in arr if x % 2 == 1]
     print(odd_list)
 
 
 # odds(arr)
+def testing():
+    blah = ""
 
 
 d = {1: "one", 2: "two", 3: "three", 4: "four"}
@@ -31,9 +40,9 @@ def find(key: int, d):
     print(f"{found}")
 
 
-find(2, d)
-find(3, d)
-find(4, d)
+# find(2, d)
+# find(3, d)
+# find(4, d)
 
 
 def count_words(string):
@@ -44,7 +53,7 @@ def count_words(string):
 
 
 s = "This is a sentence that has a lot of words in it. Please count all the words"
-count_words(s)
+# count_words(s)
 
 
 def add_or_insert(string):
@@ -58,4 +67,4 @@ def add_or_insert(string):
     print(f"Add or insert: {count}")
 
 
-add_or_insert(s)
+# add_or_insert(s)
